@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 9</title>
+    <style>
+        .container
+        {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: tomato;
+            border: 1px solid black;
+            animation-name: myanimation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes myanimation
+        {
+            0%{background-color: rgb(195, 166, 223);}
+            5%{background-color: rgb(121, 81, 81);left: 300px;}
+            10%{background-color: rgb(63, 15, 26);}
+            15%{background-color: rgb(241, 126, 190);top: 100px;}
+            20%{background-color: rgb(13, 173, 53);transform: rotate3d(1,1,1,360deg);}
+            45%{background-color: aqua;right: -300px;}
+            90%{background-color: rgb(18, 39, 134);border-radius: 50%;right: -600px;}
+            100%{background-color: rgb(95, 47, 207);top: 100px;left: 100px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>
