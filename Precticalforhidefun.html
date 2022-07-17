@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+   $(document).ready(function() {
+    //To hide the menu
+    $(".hidediv").click(function () {
+     $(".men_ex").hide("fast",function(){
+      alert("Menu is hidden!");
+    });
+   });
+    //To show the menu
+     $(".showdiv").click(function () {
+     $(".men_ex").show(2000,function(){
+      alert("Menu is displayed!");
+    });
+   });    
+    //To hide the table
+     $(".hidetable").click(function () {
+     $(".table_bg").hide("fast")
+   });
+    //To show the table
+     $(".showtable").click(function () {
+     $(".table_bg").show(2000);
+   });    
+   //To hide ODD rows
+     $(".hideoddrows").click(function () {
+     $(".table_bg  tr:odd").hide("slow")
+   });
+    //To show ODD rows
+     $(".showoddrows").click(function () {
+     $(".table_bg  tr:odd").show(1000)
+   });  
+   //To hide even columns
+   $(".hideoddcolumn").click(function () {
+    $(".table_bg th:even").hide("fast")
+    $(".table_bg td:even").hide("fast")
+    alert("ID and Age ready to hide press OK");
+   }) 
+   //show even colums
+   $(".showcolumn").click(function () {
+    $(".table_bg  th:even").show(1000)
+    $(".table_bg  td:even").show(1000)
+    alert("press OK to see ID and Age.");
+   })
+  })
+</script>
+
+
+
+<style>
+    .men_ex{
+    border-radius:5px;
+}
+.men_ex ul {
+    margin: 0; 
+    padding: 0;
+    width:185px;
+    list-style-type: none;
+    
+}
+.men_ex ul li a {
+    text-decoration: none;
+    color: #fff; 
+    padding: 10.5px 11px;
+    background-color: #f13f3f;
+    display:block;
+    border-bottom:solid 1px rgb(250, 246, 246);
+}
+.men_ex ul li a:visited {
+    color: white;
+}
+.men_ex ul li a:hover, .men_ex ul li .current {
+    color: #000;
+    background-color: #B1C7D6;
+}
+
+.show_hide{
+   position:fixed;
+   margin: 30px 30px;
+}
+.table_bg {
+  width:40%;
+  font-family:verdana;
+  font-size:15px;  
+  color:rgb(173, 15, 15);
+  padding: 10px;
+  text-align:center;
+}
+.table_bg th{
+    background: #b3ff00;
+
+    color: hwb(0 0% 97%);
+    line-height:35px;
+  }
+.table_bg td{
+    background: #15a027;    
+    padding:10px;
+
+    color: #000;
+  }  
+</style>
+</head>
+
+<body>
+  
+<h1>jQuery hide/show demo</h1>
+<div class="men_ex">
+    <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+    </ul>
+    </div>
+    <p><button class="hidediv">Hide menu</button>
+        <button class="showdiv">Show menu</button>
+        </p>  
+<button class="hidetable">Hide Table</button>
+<button class="showtable">Show Table</button>
+<button class="hideoddrows">Hide Odd rows</button>
+<button class="showoddrows">Show Odd rows</button>
+<button class="hideoddcolumn">Hide Odd columns</button>
+<button class="showcolumn">Show Odd columns</button>
+</p>
+<table class="table_bg">
+    <tr>
+     <th>ID</th>
+     <th>Name</th>
+     <th>Age</th>
+     <th>Salary</th>
+    </tr>
+    <tr>
+     <td>1</td>
+     <td>Ayush</td>
+     <td>35</td>
+     <td>$5000.00</td>
+    </tr>
+    <tr>
+     <td>2</td>
+     <td>Shubham</td>
+     <td>24</td>
+     <td>$3500.00</td>
+    </tr>
+    <tr>
+     <td>3</td>
+     <td>Shivam</td>
+     <td>31</td>
+     <td>$4000.00</td>
+    </tr>
+    <tr>
+     <td>4</td>
+     <td>Dhruv</td>
+     <td>31</td>
+     <td>$4000.00</td>
+    </tr>
+    <tr>
+     <td>5</td>
+     <td>Yash</td>
+     <td>31</td>
+     <td>$4000.00</td>
+    </tr>
+    <tr>
+     <td>6</td>
+     <td>Adity</td>
+     <td>31</td>
+     <td>$4000.00</td>
+    </tr>                
+</table>
+
+</body>
+</html>
+
